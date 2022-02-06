@@ -6,5 +6,12 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '~/plugins/gridsome-plugin-firebase-auth',
+      options: { //should be copied from `const firebaseConfig = "object"` line
+
+      }
+    }
+  ]
 }
