@@ -1,0 +1,20 @@
+{
+  "name": "gridsome-plugin-graphql-codegen",
+  "version": "1.0.0",
+  "main": "gridsome.server.js",
+  "author": "astamivishwakarma",
+  "license": "MIT",
+  "keywords": [
+    "graphql-codegen",
+    "gridsome",
+    "gridsome-plugin"
+  ],
+  "private": true,
+  "peerDependencies": {
+    "graphql": "*"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.5.0",
+    "graphql-codegen-webpack-plugin": "^0.0.7"
+  }
+}

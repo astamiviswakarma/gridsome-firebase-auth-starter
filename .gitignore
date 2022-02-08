@@ -8,3 +8,13 @@ node_modules
 dist
 .env
 .env.*
+.DS_Store
+
+src/.temp
+src/sdk
+graphql.schema.json
+
+.env
+.env.*
+*.lock
+*-lock.json
