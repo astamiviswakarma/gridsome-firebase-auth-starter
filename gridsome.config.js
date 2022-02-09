@@ -8,6 +8,9 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [
     {
+      use: 'gridsome-plugin-typescript',
+    },
+    {
       use: '~/plugins/gridsome-plugin-firebase-auth',
       options: { //should be copied from `const firebaseConfig = "object"` line
         apiKey: "AIzaSyDXQudbi3R0bLRsTUGorp56x4wLsy0neKA",
