@@ -28,9 +28,8 @@
 </template>
 
 <script>
-import { GraphQLClient } from 'graphql-request';
-import { getSdk } from '@/sdk/graphql.ts';
 import { mapGetters } from 'vuex';
+import SdkClient from '@/sdk/client.ts';
 
 
 export default {
@@ -66,8 +65,7 @@ export default {
       this.error = this.articles = null
       this.loading = true
       try {
-        const client = new GraphQLClient('http://localhost:8080/v1/graphql', {headers: {authorization: "Bearer "+ user.idToken}});
-        const sdk = getSdk(client);
+        const sdk = new SdkClient(process.env.GRIDSOME_HASURA_URL, user).getSdk();
         const { article } = await sdk.getArticles() // This is fully typed, based on the query
         this.articles = article;
       } catch (e) {
