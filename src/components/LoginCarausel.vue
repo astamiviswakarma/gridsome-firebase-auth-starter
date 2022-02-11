@@ -1,5 +1,5 @@
 <template>
-  <b-carousel>
+    <b-carousel>
         <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
             <section :class="`hero is-medium`">
                 <div class="hero-body has-text-centered">
