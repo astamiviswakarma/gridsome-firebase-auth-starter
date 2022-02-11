@@ -11,7 +11,7 @@ module.exports = {
       use: 'gridsome-plugin-typescript',
     },
     {
-      use: '~/plugins/gridsome-plugin-firebase-auth',
+      use: 'gridsome-plugin-firebase-auth',
       options: { //should be copied from `const firebaseConfig = "object"` line
         apiKey: "AIzaSyDXQudbi3R0bLRsTUGorp56x4wLsy0neKA",
         authDomain: "arogyadham-shipperstack.firebaseapp.com",
@@ -23,13 +23,13 @@ module.exports = {
       }
     },
     {
-      use: '~/plugins/gridsome-plugin-graphql-codegen',
+      use: 'gridsome-plugin-graphql-codegen',
       options: {
         configPath: './codegen.yml',
       }
     },
     {
-      use: '~/plugins/gridsome-plugin-buefy',
+      use: 'gridsome-plugin-buefy',
       options: {
         links: [
           {
