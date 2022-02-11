@@ -51,14 +51,13 @@ body {
 }
 </style>
 <script>
-import { createNamespacedHelpers } from 'vuex';
-const { mapGetters, mapActions } = createNamespacedHelpers("auth") ;
+import { mapGetters, mapActions } from 'vuex'
 export default {
   computed: {
-    ...mapGetters(["getUser", "isUserAuth"])
+    ...mapGetters('auth', ["getUser", "isUserAuth"])
   },
   methods: {
-    ...mapActions(["signOutAction"]),
+    ...mapActions('auth', ["signOutAction"]),
     signOut() {
       this.signOutAction();
     }
