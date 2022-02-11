@@ -9,7 +9,7 @@
         <g-link class="nav__link" to="/about/">About</g-link>
         <g-link class="nav__link" to="/login/" v-if="!isUserAuth">Login</g-link>
       </nav>
-      <button @click="signOut" v-if="isUserAuth">Logout</button>
+      <button class="button is-link" @click="signOut" v-if="isUserAuth">Logout</button>
     </header>
     <slot/>
   </div>
@@ -32,7 +32,7 @@ body {
 }
 
 .layout {
-  max-width: 760px;
+  max-width: 1080px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -60,7 +60,6 @@ export default {
   methods: {
     ...mapActions(["signOutAction"]),
     signOut() {
-      console.log("hello");
       this.signOutAction();
     }
   }
